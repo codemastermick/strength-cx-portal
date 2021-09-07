@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const { resolve } = require("path");
 // Copy the .env.example in the root into a .env file in this folder
-const env = require("dotenv").config({ path: "./.env" });
+const env = require("dotenv").config({ path: ".env" });
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
   apiVersion: '2020-08-27',
