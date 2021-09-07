@@ -1,0 +1,19 @@
+{
+  "name": "strength-cx-reg-portal",
+  "version": "1.0.0",
+  "description": "Customer registration server for strength.no",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": {
+    "name": "Mick Evans",
+    "email": "codemastermick@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "stripe": "^8.148.0"
+  }
+}
