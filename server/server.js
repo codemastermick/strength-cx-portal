@@ -4,6 +4,8 @@ const { resolve } = require("path");
 // Copy the .env.example in the root into a .env file in this folder
 const env = require("dotenv").config({ path: ".env" });
 
+const PORT = process.env.PORT
+
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
   apiVersion: '2020-08-27',
   appInfo: { // For sample support and debugging, not required for production:
@@ -119,4 +121,4 @@ app.post("/webhook", async (req, res) => {
   res.sendStatus(200);
 });
 
-app.listen(4242, () => console.log(`Node server listening on port ${4242}!`));
+app.listen(PORT, () => console.log(`Node server listening on port ${PORT}!`));
